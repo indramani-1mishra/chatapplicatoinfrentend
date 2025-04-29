@@ -1,0 +1,102 @@
+/* Example CSS */
+.submit-form {
+   box-shadow: 0px 0px 8px 0px rgb(170, 166, 166);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 30%;
+  }
+  .formcontainer{
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .form-header  {
+    background: linear-gradient(white, rgb(146, 219, 146), rgb(186, 236, 180));
+    padding: 5px;
+    width: 100%;
+  }
+  
+  
+  .form-fields {
+    display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   width: 100%;
+    padding: 20px;
+     justify-content: center;
+  }
+  
+  .form-field {
+    margin-bottom: 15px;
+  }
+  
+  .input-username,
+  .input-email,
+  .input-password,
+  .input-photo {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+  }
+  
+  .submit-btn {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: darkgreen;
+  }
+  
+  .login-link {
+    color: blue;
+  }
+  .form-footer{
+ 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    
+  }
+  @media (max-width:450px){
+    .formcontainer{
+      width: 100%;
+      padding: 0;
+      border: 2px solid greenyellow;
+      margin: 0;
+    }
+    
+    .form-fields{
+      flex-direction: column;
+    }
+    .submit-form {
+        width: 100%;
+    }
+    
+  }
+  .form-submit{
+    
+    width: 100%;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
