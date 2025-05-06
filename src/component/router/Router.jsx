@@ -1,9 +1,11 @@
 import React, { useContext } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
-import T from '../maincontainer/temporoy/T'
+
 import Createuser from '../maincontainer/auth/creatuser/Creatuser'
 import Login from '../maincontainer/auth/loginuser/login'
 import Context from '../../context/formresultcontext'
+import Userprofile from '../maincontainer/profile/userprofile'
+import Chatboxcontainer from '../maincontainer/chatbox/chatboxcontainer'
 
 export default function Router() {
     const {loggedin}= useContext(Context);
@@ -11,11 +13,11 @@ export default function Router() {
     <>
       <Routes>
       <Route  path='/' element={<div>
-          {loggedin? <p>welcome to homepage you can see when you are login  </p>:<Link to="/creatuser">first create user</Link>  } 
+          {loggedin? <Chatboxcontainer/> :<Createuser/>  } 
         </div>}/>
-        <Route  path='/verify'element={<T/>}/>
+        <Route  path='/verify'element={<Chatboxcontainer/>}/>
         <Route path='/creatuser'element={<Createuser/>}/>
-        <Route  path='/login' element={<Login/>}/>
+        <Route  path='/login' element= {loggedin ? <Userprofile/> : <Login/>}/>
         
       </Routes>
     </>

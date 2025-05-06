@@ -4,15 +4,23 @@ import './index.css';
 import App from './App.jsx';
 import { BrowserRouter } from 'react-router-dom';
 import Contextprovider from './context/contextprovider.jsx';
+import { Provider } from 'react-redux';
+import store from './redux/userdetails/userslice.jsx';
+
+
 
 const root = createRoot(document.getElementById('root'));
 
 root.render(
-  <React.StrictMode>
-    <Contextprovider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Contextprovider>
-  </React.StrictMode>
+  
+   
+ <Provider store={store}>
+   <Contextprovider>
+    
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Contextprovider>
+   
+ </Provider>
 );

@@ -1,0 +1,23 @@
+.chatappcontainer {
+    display: grid;
+    grid-template-columns: 20% 80%; /* ✅ No comma */
+    border: 2px solid green;
+    height: 100%;
+   
+}
+.sidebar{
+  border: 2px solid gold;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+
+  
+}
+.containerchat{
+ border:  2px solid  black;
+ height:  100%;
+}
+
+*{
+    box-sizing: border-box;
+}

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Submitmutform from '../../../reuseblecomponents/submitformreusble/submitmutform';
 import Context from '../../../../context/formresultcontext';
+import { toast } from 'react-toastify';
 
 function Createuser() {
   const [name, setUsername1] = useState('');
@@ -26,10 +27,10 @@ function Createuser() {
 
     try {
       const formData = new FormData();
-      formData.append('name', name);
-      formData.append('email', email);
-      formData.append('password', password);
-      formData.append('profileimage', profileimage);
+         formData.append("name",name);
+         formData.append("email",email);
+         formData.append("password",password);
+         formData.append("profileimage",profileimage)
 
       const response = await axios.post(
         'http://localhost:3001/api/v1/users/',
@@ -46,7 +47,7 @@ function Createuser() {
       // API se success boolean mil raha hai toh usko handle karo
       if (response.data.success) {
         setsuccess("true");
-        alert("user created successfully");
+        toast.success(response.data.Message);
         navigate('/login');
       }
 
@@ -58,6 +59,7 @@ function Createuser() {
 
     } catch (error) {
       console.error("Error while submitting form:", error);
+      toast.error(error.message)
     }
   };
 

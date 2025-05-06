@@ -1,0 +1,24 @@
+.inputbox{
+    background-color: white;
+    width: 90%;
+    outline: none;
+    padding: 5px 10px;
+   
+    border-right: none;
+}
+.btns{
+    padding: 10px;
+    color: rgb(150, 150, 150);
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+.userdatafield{
+    
+    margin-top: 8px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    
+}
